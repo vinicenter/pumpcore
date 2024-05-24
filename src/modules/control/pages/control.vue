@@ -1,3 +1,9 @@
+<script setup lang="ts">
+definePageMeta({
+  name: 'control',
+})
+</script>
+
 <template>
   <div class="flex justify-center items-center h-300px">
     <div class="flex gap-xs m-x-8">

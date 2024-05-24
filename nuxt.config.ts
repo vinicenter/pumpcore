@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   extends: [
     './src/core/',
     './src/modules/home',
-    './src/modules/controll',
+    './src/modules/control',
   ],
   build: {
     transpile: ['vuetify'],
