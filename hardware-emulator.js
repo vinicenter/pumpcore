@@ -53,10 +53,12 @@ function onDataInput(data) {
 
 
 http.createServer((req, res) => {
-  const [ _domain, data ] = req.url.split('/?')
+  const [ _domain, data ] = req.url.split('/')
 
   onDataInput(data)
 
+  res.writeHead(200, { 'Content-Type': 'text/plain' })
+  res.write('Data received')
   res.end()
 }).listen(3001)
 
