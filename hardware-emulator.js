@@ -1,4 +1,5 @@
 import axios from 'axios';
+import http from 'http'
 
 const API_URL = 'http://localhost:3000/api/control/state'
 const UPDATE_MINUTES = 1
@@ -50,6 +51,15 @@ function onDataInput(data) {
     console.log('Invalid input')
   }
 }
+
+
+http.createServer((req, res) => {
+  const [ _domain, data ] = req.url.split('/?')
+
+  onDataInput(data)
+
+  res.end()
+}).listen(3001)
 
 process.stdin.on("data", data => {
   data = data.toString().toUpperCase()
