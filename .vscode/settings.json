@@ -1,3 +1,11 @@
 {
   "editor.tabSize": 2,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "${workspaceFolder:pumpcore}/.wrangler/state/v3/d1/miniflare-D1DatabaseObject/20e1b66cad130868e7d683b087d1fa1f49f840875ac7fceea27dd0d0305d481c.sqlite",
+      "name": "pumpcore"
+    }
+  ],
 }

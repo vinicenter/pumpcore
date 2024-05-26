@@ -1,0 +1,20 @@
+CREATE TABLE `pump_states` (
+	`id` text PRIMARY KEY NOT NULL,
+	`auto_manual` integer DEFAULT 0 NOT NULL,
+	`pump1` integer DEFAULT 0 NOT NULL,
+	`pump2` integer DEFAULT 0 NOT NULL,
+	`pump3` integer DEFAULT 0 NOT NULL,
+	`alarm` integer DEFAULT 0 NOT NULL,
+	`cistern_level` integer DEFAULT 0 NOT NULL,
+	`superior_tank_level` integer DEFAULT 0 NOT NULL,
+	`ib1` integer DEFAULT 0 NOT NULL,
+	`ib2` integer DEFAULT 0 NOT NULL,
+	`ib3` integer DEFAULT 0 NOT NULL,
+	`lad` integer DEFAULT 0 NOT NULL,
+	`pump1_state` text DEFAULT 'off' NOT NULL,
+	`pump2_state` text DEFAULT 'off' NOT NULL,
+	`pump3_state` text DEFAULT 'off' NOT NULL,
+	`al` text DEFAULT 'off' NOT NULL,
+	`created_at` text NOT NULL,
+	`updated_at` text NOT NULL
+);
