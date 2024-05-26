@@ -23,28 +23,32 @@ const data = computed<typeof dataFetch['value']>(() => {
 
     <div class="flex justify-center items-center h-300px">
       <div class="flex gap-xs m-x-8" v-if="data">
-        <VBtn
+        <CommandButton
+          command="A"
           density="compact"
           icon="mdi-circle-small"
           :color="Number(data.pump1) ? 'green' : 'warning'"
         />
-        <VBtn
+        <CommandButton
+          command="B"
           density="compact"
           icon="mdi-circle-small"
           :color="Number(data.pump2) ? 'green' : 'warning'"
         />
-        <VBtn
+        <CommandButton
+          command="C"
           density="compact"
           icon="mdi-circle-small"
           :color="Number(data.pump3) ? 'green' : 'warning'"
         />
-        <VBtn
+        <CommandButton
+          command="D"
           density="compact"
           icon="mdi-circle-small"
           color="warning"
         />
       </div>
-  
+
       <div class="flex gap-xs">
         <VBtn
           density="compact"

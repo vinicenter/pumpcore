@@ -26,6 +26,9 @@ export default defineNuxtConfig({
       websocket: true
     }
   },
+  devServer: {
+    host: ''
+  },
   vite: {
     vue: {
       template: {
