@@ -1,4 +1,3 @@
-import axios from 'axios';
 import http from 'http'
 
 const API_URL = 'http://localhost:3000/api/control/state'
@@ -68,12 +67,16 @@ process.stdin.on("data", data => {
 })
 
 async function sendState() {
-  console.log('state sent', actualState)
+  console.log('state sent: ', actualState)
 
   try {
-    await axios.post(API_URL, {
-      state: actualState,
-    })
+    await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ state: actualState }),
+    });
   } catch(e) {
     console.log('Error sending state to API: ', e)
   }
