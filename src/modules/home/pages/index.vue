@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
+  <VContainer class="h-100vh">
     <h1>Início</h1>
-  </div>
+  </VContainer>
 </template>

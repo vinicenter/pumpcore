@@ -9,7 +9,7 @@ interface Item {
 
 const router = useRouter()
 
-const drawer = ref(true)
+const drawer = ref(false)
 
 const items: Item[][] = [
   [
@@ -75,11 +75,8 @@ const items: Item[][] = [
       </VList>
     </VNavigationDrawer>
 
-
     <VMain>
-      <VContainer class="h-100vh">
-        <slot />
-      </VContainer>
+      <slot />
     </VMain>
   </VLayout>
 </template>

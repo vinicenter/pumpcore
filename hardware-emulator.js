@@ -3,7 +3,7 @@ import http from 'http'
 const API_URL = 'http://localhost:3000/api/control/state'
 const UPDATE_MINUTES = 1
 
-let actualState = "0;0;0;0;0;100;120;0;0;0;0;0;0;0;0"
+let actualState = "1;0;0;0;0;100;120;0;0;0;0;1;0;0;0"
 
 function getState() {
   const stateArray = actualState.split(';')
@@ -39,7 +39,13 @@ function onDataInput(data) {
   const state = getState()
 
   const dataInputs = {
-    A: () => updateState(1, state.pump1 ? '0' : '1'),
+    A: () => updateState(1, +state.pump1 ? '0' : '1'),
+    B: () => updateState(2, +state.pump2 ? '0' : '1'),
+    C: () => updateState(3, +state.pump3 ? '0' : '1'),
+    D: () => updateState(0, +state.autoManual ? '0' : '1'),
+    E: () => updateState(4, +state.alarm ? '0' : '1'),
+    F: () => updateState(11, +state.pump1State ? '0' : '1'),
+    G: () => updateState(12, +state.pump2State ? '0' : '1'),
   }
 
   try {
